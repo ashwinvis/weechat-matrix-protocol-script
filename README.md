@@ -111,7 +111,7 @@ unofficial packages [here](https://weechat.org/download/debian/).
 ### using brew (recommended; it's a simpler faster install and ships newer weechat than MacPorts):
 ```bash
 brew install lua
-luarocks install lua-cjson
+luarocks install lua-cjson 2.1.0-1
 brew install weechat --with-lua
 ```
 
@@ -119,7 +119,7 @@ brew install weechat --with-lua
 ```bash
 sudo port install weechat +lua
 sudo port install luarocks
-sudo luarocks install lua-cjson
+sudo luarocks install lua-cjson 2.1.0-1
 # You may need to substitute the version number for whatever version of lua macports installed
 export LUA_PATH="/opt/local/share/luarocks/share/lua/5.3/?.lua;/opt/local/share/luarocks/share/lua/5.3/?/init.lua;$LUA_PATH"
 export LUA_CPATH="/opt/local/share/luarocks/lib/lua/5.3/?.so;$LUA_CPATH"
@@ -131,7 +131,9 @@ sudo pacman -S lua weechat
 # You can grab lua-cjson from either the AUR:
 pacaur -y lua-cjson
 # Or through the luarocks package manager:
-luarocks install lua-cjson
+sudo pacman -S luarocks
+luarocks install lua-cjson 2.1.0-1 --local
+echo 'eval $(luarocks path --bin)' >> ~/.bashrc
 ```
 
 # Encryption
