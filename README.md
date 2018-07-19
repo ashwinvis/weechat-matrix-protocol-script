@@ -133,7 +133,7 @@ pacaur -y lua-cjson
 # Or through the luarocks package manager:
 sudo pacman -S luarocks
 luarocks install lua-cjson 2.1.0-1 --local
-echo 'eval $(luarocks path --bin)' >> ~/.bashrc
+echo 'eval $(luarocks path --bin --append)' >> ~/.bashrc
 ```
 
 # Encryption
